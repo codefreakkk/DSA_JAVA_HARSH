@@ -1,0 +1,66 @@
+package recursion;
+
+public class NQueensLeetCode {
+    static boolean isSafeToMove(int n, int col, int row, List<Integer> board) {
+        int duplicateCol = col;
+        int duplicateRow = row;
+
+        // check for upward diagonal
+        while(col >= 0 && row >=0) {
+            if(board[row][col] == 'Q') return false;
+            row--;
+            col--;
+        }
+        // check for middle line
+        col = duplicateCol;
+        row = duplicateRow;
+        while(col >= 0) {
+            if(board[row][col] == 'Q') return false;
+            col--;
+        }
+        // check for downward diagonal
+        col = duplicateCol;
+        row = duplicateRow;
+        while(row < n && col >= 0) {
+            if(board[row][col] == 'Q') return false;
+            row++;
+            col--;
+        }
+        return true;
+    }
+
+    static void solve(int n, int col, List<Integer> board, List<List<String>> answer) {
+        if(col == n) {
+            answer.add(new ArrayList<>(board));
+            return;
+        }
+        for(int row = 0; row < n; row++) {
+            if(isSafeToMove(n, col, row, board)) {
+                board[row][col] = 'Q';
+                solve(n, col + 1, board, answer);
+                board[row][col] = '.';
+            }
+        }
+    }
+
+    static List<List<String>> solveNQueens(int n) {
+        List<List<String>> answer = new ArrayList<>();
+        List<String> board = new ArrayList<>();
+
+        StringBuilder string = new StringBuilder();
+        for(int i = 0; i < n; i++) {
+            string.append(".");
+        }
+        String boardString = string.toString();
+        for(int i = 0; i < n; i++) {
+            board[i] = boardString;
+        }
+
+        solve(n, 0, board, answer);
+        return answer;
+    }
+
+    public static void main(String[] args) {
+
+    }
+}
