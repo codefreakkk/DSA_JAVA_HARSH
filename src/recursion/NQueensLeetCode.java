@@ -38,7 +38,6 @@ public class NQueensLeetCode {
             for(int i = 0; i < n; i++) {
                 lst.add(new String(board[i]));
             }
-
             answer.add(lst);
             return;
         }

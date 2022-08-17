@@ -39,7 +39,13 @@ public class Test {
 //        int a = 10;
 //        char a = '9';
 //        System.out.println(a == (char) (9 + '0'));
+//        char ch = ':';
+//        System.out.println(Character.isLetterOrDigit(ch));
+//        boolean[] a = new boolean[6];
+//        System.out.println(a[1]);
 
+        String s = "harshsachinsaid";
+        System.out.println(s.startsWith("harsh"));
     }
 
 }

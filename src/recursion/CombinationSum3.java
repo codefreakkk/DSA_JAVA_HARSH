@@ -29,7 +29,7 @@ public class CombinationSum3 {
     }
 
     public static void main(String args[]) {
-        List<List<Integer>> answer = combinationSum3(9, 45);
+        List<List<Integer>> answer = combinationSum3(2, 3);
         for(List<Integer> i : answer) {
             System.out.println(i);
         }

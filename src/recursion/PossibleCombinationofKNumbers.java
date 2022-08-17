@@ -27,7 +27,7 @@ public class PossibleCombinationofKNumbers {
     }
 
     public static void main(String args[]) {
-        List<List<Integer>> answer = combine(4, 1);
+        List<List<Integer>> answer = combine(4, 3);
         for(List<Integer> i : answer) {
             System.out.println(i);
         }

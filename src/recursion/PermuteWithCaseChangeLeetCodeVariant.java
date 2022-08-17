@@ -3,7 +3,7 @@ package recursion;
 import java.util.*;
 
 public class PermuteWithCaseChangeLeetCodeVariant {
-//    leetcode784
+//    leetcode 784
 //    appraoch if character ignore it and if the letters are in upper case than we need to get letters with the combination of lower case and vice versa
 //    so call the recursion in if and else block for both the upper case & lower case condtion
     static void solve(String output, String input, List<String> answer) {

@@ -1,3 +1,5 @@
+package recursion;
+
 public class CheckPalindrome {
 
     public static boolean solve(int start, int end, String str) {

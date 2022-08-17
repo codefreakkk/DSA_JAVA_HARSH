@@ -19,7 +19,7 @@ public class GenerateParenthesesLeetcode {
 
     public static List<String> generateParentheses(int n) {
         List<String> answer = new ArrayList<>();
-        solve(n, n, "", answer);
+        solve(3, 3, "", answer);
         return answer;
     }
 

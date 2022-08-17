@@ -46,7 +46,7 @@ public class NQueens {
     }
 
     public static void main(String[] args) {
-        System.out.println(queens(new boolean[4][4], 0));
+        System.out.println(queens(new boolean[4][4], 3));
     }
 }
 
