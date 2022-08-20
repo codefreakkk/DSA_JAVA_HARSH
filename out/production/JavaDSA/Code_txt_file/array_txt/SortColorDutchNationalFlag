@@ -1,0 +1,36 @@
+package array;
+
+public class SortColorDutchNationalFlag {
+    public static swap(int[] nums, int x, int y) {
+        int temp = nums[x];
+        nums[x] = nums[y];
+        nums[y] = temp;
+    }
+
+    public static sortColors(int[] nums) {
+        int low = 0;
+        int mid = 0;
+        int high = nums.length - 1;
+
+        while(mid <= high) {
+            if(mid == 0) {
+                swap(nums, low, mid);
+                low++;
+                mid++;
+            } else if(mid == 1) {
+                mid++;
+            } else {
+                swap(mid, high)
+                high--;
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] nums = {2, 0, 2, 1, 1, 0};
+        sortColors(nums);
+        for(int i : nums) {
+            System.out.println(i);
+        }
+    }
+}

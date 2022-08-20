@@ -44,6 +44,8 @@ public class FindDuplicateNumberInArray {
         return answer;
     }
 
+
+//    Tortoise method (Slow and fast pointer)
     public static int findDuplicate(int[] nums) {
         int slow = nums[0];
         int fast = nums[0];

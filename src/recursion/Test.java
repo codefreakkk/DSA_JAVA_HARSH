@@ -44,8 +44,17 @@ public class Test {
 //        boolean[] a = new boolean[6];
 //        System.out.println(a[1]);
 
-        String s = "harshsachinsaid";
-        System.out.println(s.startsWith("harsh"));
+//        String s = "harshsachinsaid";
+//        System.out.println(s.startsWith("harsh"));
+
+//        System.out.println(4 >> 3);
+//        int num = 4;
+//        int count = 0;
+//        while(num > 0) {
+//            num = num >> 1;
+//            count++;
+//        }
+//        System.out.println(count -1);
     }
 
 }

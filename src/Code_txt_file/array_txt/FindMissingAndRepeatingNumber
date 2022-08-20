@@ -1,0 +1,60 @@
+package array;
+
+public class FindMissingAndRepeatingNumber {
+    public static int getRightMostBit(int num) {
+        int count = 0;
+        while(num > 0) {
+            num = >>= 1;
+            count++;
+        }
+        return count - 1;
+    }
+
+    public static boolean isRightBitSet(int num, int index) {
+        if((num & (1 << index)) > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public static void findTwoElement(int[] arr, int n) {
+        int x = 0;
+        for(int i = 0; i < n; i++) {
+            x ^= arr[i];
+        }
+
+        int y = 0;
+        for(int i = 1; i <= n; i++) {
+            y ^= i;
+        }
+        int num = x ^ y;
+
+        int index = getRightMostBit(num);
+        int basket1 = 0;
+        int basket2 = 0;
+        for(int i = 0; i < n; i++) {
+            if(isRightBitSet(arr[i], index)) {
+                basket1 ^= arr[i];
+            } else {
+                basket2 ^= arr[i];
+            }
+        }
+
+        for(int i = 1; i <= n; i++) {
+            if(isRightBitSet(i, index)) {
+                basket1 ^= i;
+            } else {
+                basket2 ^= i;
+            }
+        }
+
+        System.out.println(basket1);
+        System.out.println(basket2);
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {4, 3, 6, 2, 1, 1};
+        findTwoElement(arr, arr.length);
+    }
+}
