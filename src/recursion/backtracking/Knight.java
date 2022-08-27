@@ -52,7 +52,7 @@ public class Knight {
             }
         }
         if(checkIfIndexIsOutOfBound(board, row - 1, col + 2)) {
-            if(board[row + - 1][col + 2]) {
+            if(board[row - 1][col + 2]) {
                 return false;
             }
         }

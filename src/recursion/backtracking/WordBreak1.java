@@ -3,6 +3,7 @@ package recursion.backtracking;
 import java.util.*;
 
 public class WordBreak1 {
+//    problem will not work for some test cases (require dynamic programming here)
     public static boolean solve(String s, Set<String> dict, int start) {
         if(start == s.length()) return true;
 
