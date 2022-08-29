@@ -1,0 +1,56 @@
+package two_pointers;
+
+import java.util.*;
+
+public class _4Sum {
+//    brute force approach this approach will not work for bigger integers
+    public static void binarySearch(int[] nums, int i, int j, int k, int low, int high, long target, Set<List<Integer>> ans) {
+        if(low < nums.length) {
+            while(low <= high) {
+                int mid = (low + high) / 2;
+
+                if(nums[mid] == target) {
+                    List<Integer> list = new ArrayList<>();
+                    list.add(nums[i]);
+                    list.add(nums[j]);
+                    list.add(nums[k]);
+                    list.add(nums[mid]);
+                    Collections.sort(list);
+                    ans.add(list);
+                    break;
+                }
+                else if(nums[mid] < target) low = mid + 1;
+                else high = mid - 1;
+            }
+        }
+    }
+
+    public static List<List<Integer>> fourSum(int[] nums, int target) {
+        Arrays.sort(nums);
+        Set<List<Integer>> ans = new HashSet<>();
+        int size = nums.length;
+        for(int i = 0; i < size - 2; i++) {
+            for(int j = i + 1; j < size - 1; j++) {
+                for(int k = j + 1; k < size - 1; k++) {
+                    int low = k + 1;
+                    int high = size - 1;
+                    long sum = nums[i] + nums[j] + nums[k];
+                    long remain = target - sum;
+                    binarySearch(nums,i, j, k, low, high, remain, ans);
+                }
+            }
+        }
+
+        List<List<Integer>> answer = new ArrayList<>(ans);
+        return answer;
+    }
+
+    public static void main(String[] args) {
+        int[] nums = {1000000000,1000000000,1000000000,1000000000};
+        int target = -294967296;
+        List<List<Integer>> ans = fourSum(nums, target);
+        for(List<Integer> i : ans) {
+            System.out.println(i);
+        }
+    }
+}
