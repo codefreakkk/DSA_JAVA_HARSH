@@ -50,8 +50,8 @@ public class _4Sum {
         Arrays.sort(nums);
 
         int i = 0;
-        for (i = 0; i < size; i++) {
-            for (int j = i + 1; j < size; j++) {
+        for (i = 0; i < size - 3; i++) {
+            for (int j = i + 1; j < size - 2; j++) {
                 int low = j + 1;
                 int high = size - 1;
                 long remain = (long) target - nums[j] - nums[i];
@@ -68,10 +68,11 @@ public class _4Sum {
                         }
                         low++;
                         high--;
-                    } else if (totalValue < remain) low++;
+                    }
+                    else if (totalValue < remain) low++;
                     else high--;
                 }
-                while (j + 1< size && nums[j] == nums[j + 1]) j++;
+                while (j + 1 < size && nums[j] == nums[j + 1]) j++;
             }
             while (i + 1 < size && nums[i] == nums[i + 1]) i++;
         }

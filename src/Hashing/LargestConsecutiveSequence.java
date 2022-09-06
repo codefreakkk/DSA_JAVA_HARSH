@@ -30,6 +30,7 @@ public class LargestConsecutiveSequence {
         int cnt = 0, maxi = Integer.MIN_VALUE;
 
         for(int i = 0; i < size; i++) set.add(nums[i]);
+
         for(int i = 0; i < size; i++) {
             if(!set.contains(nums[i] - 1)) {
                 int j = nums[i];

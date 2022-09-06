@@ -1,7 +1,6 @@
 package recursion;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Test {
     public static int add(int n) {
@@ -56,6 +55,32 @@ public class Test {
 //        }
 //        System.out.println(count -1);
 
+//        HashMap<Integer, Integer> map = new HashMap<>();
+//        map.put(10, 1);
+//        map.put(10, map.get(10) + 1);
+//        System.out.println(map.get(10));
+
+//        String[] arr = {"zxy", "ayz"};
+//        Arrays.sort(arr);
+//        System.out.println(Arrays.toString(arr));
+
+//        HashMap<Integer, Integer> map = new HashMap<>();
+//        map.put(9, 2);
+//        map.put(8, 1);
+//        map.put(7, 1);
+//        map.remove(8);
+////        int size = map.size();
+////        System.out.println(size);
+////        System.out.println(map);
+//            map.forEach((key,value) -> {
+//                System.out.println(key);
+//            });
+
+//        String a = "eat";
+//        char[] string = a.toCharArray();
+//        Arrays.sort(string);
+//        String ans = String.valueOf(string);
+//        System.out.println(ans);
     }
 
 }
