@@ -10,24 +10,25 @@ public class LongestSubstringWithKUniqueChar {
 
         while(j < size) {
             String element = String.valueOf(s.charAt(j));
-            if(map.size() < k) {
-                map.put(element, map.getOrDefault(element, 0) + 1);
+            map.put(element, map.getOrDefault(element, 0) + 1);
+
+            if(map.size() == k) {
+                int index = j - i + 1;
+                maxi = Math.max(maxi, index);
             }
             if(map.size() > k) {
                 while(map.size() > k) {
-                    String data = String.valueOf(s.charAt(i));
+                    String data = String.valueOf(s.charAt(i++));
                     map.put(data, map.get(data) - 1);
-                    if(map.get(data) == 0) map.remove(data);
-                    i++;
+                    if(map.get(data) == 0) {
+                        map.remove(data);
+                    }
                 }
-            }
-            if(map.size() == k) {
-                maxi = Integer.max(maxi, j - i + 1);
             }
             j++;
         }
 
-        if(maxi == 0) return -1;
+        if(maxi <= 0) return -1;
         return maxi;
     }
 

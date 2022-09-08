@@ -4,6 +4,11 @@ import java.util.*;
 
 public class SlidingWindowMaximum {
     public static int[] maxSlidingWindow(int[] nums, int k) {
+        if(nums.length == 1) {
+            int[] num = {nums[0]};
+            return num;
+        }
+
         int i = 0, j = 0, size = nums.length;
         List<Integer> list = new ArrayList<>();
         List<Integer> ans = new ArrayList<>();
