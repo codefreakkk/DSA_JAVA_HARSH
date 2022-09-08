@@ -61,13 +61,4 @@ public class CircularQueue {
             i %= data.length;
         } while(i != back);
     }
-
-    public static void main(String[] args) throws Exception {
-        CircularQueue queue = new CircularQueue(3);
-        queue.insert(10);
-        queue.insert(20);
-        queue.insert(30);
-        queue.remove();
-        queue.display();
-    }
 }

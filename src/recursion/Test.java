@@ -81,6 +81,8 @@ public class Test {
 //        Arrays.sort(string);
 //        String ans = String.valueOf(string);
 //        System.out.println(ans);
+    Stack<Integer> stack = new Stack<>();
+    stack.push(10);
+        System.out.println(stack.size());
     }
-
 }
