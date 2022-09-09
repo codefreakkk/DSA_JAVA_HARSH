@@ -1,4 +1,4 @@
-package StackQueue;
+package StackQueue.stack;
 
 public class PrefixToInfix extends PostfixToInfix {
     public static String stringReverse(String s) {

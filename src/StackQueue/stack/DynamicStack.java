@@ -1,4 +1,4 @@
-package StackQueue;
+package StackQueue.stack;
 
 public class DynamicStack extends CustomStack {
     public DynamicStack() {

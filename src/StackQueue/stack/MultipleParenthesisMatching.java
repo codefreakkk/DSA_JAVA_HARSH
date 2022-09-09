@@ -1,6 +1,6 @@
-package StackQueue;
+package StackQueue.stack;
 
-import java.util.*;
+import java.util.Stack;
 
 public class MultipleParenthesisMatching {
     public static boolean match(char poped, char exp) {

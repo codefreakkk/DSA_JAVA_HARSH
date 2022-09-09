@@ -1,6 +1,8 @@
-package StackQueue;
+package StackQueue.queue;
 
-public class DynamicQueue extends CircularQueue {
+import StackQueue.stack.InfixToPostfix;
+
+public class DynamicQueue extends InfixToPostfix.CircularQueue {
 
     public DynamicQueue() {
         super();

@@ -1,6 +1,6 @@
-package StackQueue;
+package StackQueue.stack;
 
-import java.util.*;
+import java.util.Stack;
 
 public class ParenthesisMatching {
     public static boolean parenthesisMatching(String s) {
