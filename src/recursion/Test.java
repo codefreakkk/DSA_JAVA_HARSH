@@ -2,18 +2,18 @@ package recursion;
 
 import java.util.*;
 
-class Pair<T1, T2> {
-
-    T1 a;
-    T2 b;
-    Pair() {}
-    public Pair(T1 a, T2 b) {
-       this.a = a;
-       this.b = b;
-    }
-
-
-}
+//class Pair<T1, T2> {
+//
+//    T1 a;
+//    T2 b;
+//    Pair() {}
+//    public Pair(T1 a, T2 b) {
+//       this.a = a;
+//       this.b = b;
+//    }
+//
+//
+//}
 
 public class Test {
 //    public static int add(int n) {
@@ -101,10 +101,25 @@ public class Test {
 
 
     public static void main(String[] args) {
-        Stack<Pair<Integer, Integer>> stack = new Stack<>();
-        stack.push(new Pair<>(10, 2));
-        stack.push(new Pair<>(20, 2));
-        System.out.println(stack.peek().a);
+//        Stack<Pair<Integer, Integer>> stack = new Stack<>();
+//        stack.push(new Pair<>(10, 2));
+//        stack.push(new Pair<>(20, 2));
+//        System.out.println(stack.peek().a);
+//        char a = '1';
+////        int b = a - '0'; // converts char to int
+////        System.out.println(b);
+////        int a = 1;
+////        char b = (char) (a + '0'); // converts int to char
+//        int a = 10;
+//        char b = (char) (a + '0');
+//        System.out.println(a);
+
+//        char[] ch = {'1', '1'};
+//        int[] a = new int[2];
+//        for(int i = 0; i < ch.length; i++) {
+//            a[i] = (char) (ch[i] - '0');
+//        }
+//        System.out.println(a[0]);
     }
 
 }
