@@ -2,7 +2,7 @@ package StackQueue.stack;
 
 import java.util.*;
 
-public class NextSmallerElement {
+public class NearestSmallerElementToRight {
     public static void nextSmaller(int[] nums, int n) {
         Stack<Integer> stack = new Stack<>();
         stack.push(-1);
