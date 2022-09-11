@@ -9,6 +9,7 @@ public class DequeImplementation {
         arr = new int[size];
     }
 
+    // deque function
     public boolean insertFront(int value) {
         // check if deque is full
         if(isFull()) return false;
@@ -44,6 +45,8 @@ public class DequeImplementation {
         return true;
     }
 
+
+    // deque function
     public boolean deleteLast() {
         // is empty
         if(isEmpty()) return false;

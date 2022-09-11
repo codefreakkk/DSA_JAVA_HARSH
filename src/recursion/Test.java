@@ -120,6 +120,12 @@ public class Test {
 //            a[i] = (char) (ch[i] - '0');
 //        }
 //        System.out.println(a[0]);
+
+        Stack<Integer> stack = new Stack<>();
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+        System.out.println(stack.peek());
     }
 
 }
