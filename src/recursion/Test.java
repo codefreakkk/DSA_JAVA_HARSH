@@ -121,11 +121,13 @@ public class Test {
 //        }
 //        System.out.println(a[0]);
 
-        Stack<Integer> stack = new Stack<>();
-        stack.push(1);
-        stack.push(2);
-        stack.push(3);
-        System.out.println(stack.peek());
+//        Stack<Integer> stack = new Stack<>();
+//        stack.push(1);
+//        stack.push(2);
+//        stack.push(3);
+//        System.out.println(stack.peek());
+
+        System.out.println(Math.abs(-1) + Math.abs(1));
     }
 
 }
