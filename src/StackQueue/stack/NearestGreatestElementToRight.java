@@ -21,7 +21,7 @@ public class NearestGreatestElementToRight {
     }
 
     public static void main(String[] args) {
-        long[] nums = {6, 8, 0, 1, 3};
+        long[] nums = {100, 85, 60, 70, 60, 75, 85};
         long[] ans = nextGreaterToRight(nums, nums.length);
         System.out.println(Arrays.toString(ans));
     }

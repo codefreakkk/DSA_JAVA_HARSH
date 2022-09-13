@@ -19,7 +19,7 @@ public class NearestGreatestElementToLeft {
     }
 
     public static void main(String[] args) {
-        int[] nums = {1, 2, 3, 4};
+        int[] nums = {100, 80, 60, 70, 60, 75, 85};
         int[] ans = nextGreatestElementToLeft(nums, nums.length);
         System.out.println(Arrays.toString(ans));
     }
