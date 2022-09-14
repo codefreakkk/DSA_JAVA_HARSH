@@ -34,6 +34,8 @@ public class GetMinimumElementFromStack {
 
         else {
             int prevMin = minimum;
+
+            // flag conversion
             int value = (2 * minimum) - current;
             minimum = value;
 

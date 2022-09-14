@@ -29,7 +29,7 @@ public class FirstNonRepeatingCharacterInStream {
     }
 
     public static void main(String[] args) {
-        String str = "zz";
+        String str = "aabbcc";
         System.out.println(firstNonRepeatingCharacter(str));
     }
 }
