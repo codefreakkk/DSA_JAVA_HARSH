@@ -28,6 +28,7 @@ public class NStacksInAnArray {
         if(freeSpot == -1) return false;
         // update index
         int index = freeSpot;
+        
         // update freespot
         freeSpot = next[index];
         // update new data
