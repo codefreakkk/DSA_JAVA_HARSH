@@ -127,8 +127,10 @@ public class Test {
 //        stack.push(3);
 //        System.out.println(stack.peek());
 
-        System.out.println(Math.abs(-1) + Math.abs(1));
+//        System.out.println(Math.abs(-1) + Math.abs(1));
+//        System.out.println();
     }
+
 
 }
 
