@@ -1,4 +1,4 @@
-package contests.codeforces.Div3_820;
+package contests.codeforces;
 
 import java.util.*;
 import java.io.*;
@@ -59,22 +59,25 @@ public class Template {
             bw.close();
         }
     }
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws IOException, Exception {
         try {
             FastReader in=new FastReader();
             FastWriter out = new FastWriter();
-            int testCases=in.nextInt();
-            while(testCases-- > 0){
-                // write code here
-                int n = in.nextInt();
 
-                int m = in.nextInt();
+            // code here
+            int t=in.nextInt();
+            while(t-- > 0) {
 
-                System.out.println(n + " " + m);
             }
+
             out.close();
         } catch (Exception e) {
+            e.printStackTrace();
             return;
         }
     }
 }
+
+
+
