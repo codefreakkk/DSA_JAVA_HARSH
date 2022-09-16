@@ -1,5 +1,6 @@
 package StackQueue.stack;
 
+import java.lang.reflect.Array;
 import java.util.*;
 
 public class MaximumOfMinimumForEveryWindowSize {
@@ -16,7 +17,7 @@ public class MaximumOfMinimumForEveryWindowSize {
             indexes[i] = stack.peek();
             stack.push(i);
         }
-
+        System.out.println(Arrays.toString(indexes));
         return indexes;
     }
 
@@ -33,7 +34,7 @@ public class MaximumOfMinimumForEveryWindowSize {
             indexes[i] = stack.peek();
             stack.push(i);
         }
-
+        System.out.println(Arrays.toString(indexes));
         return indexes;
 
     }
