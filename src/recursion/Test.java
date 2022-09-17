@@ -129,6 +129,14 @@ public class Test {
 
 //        System.out.println(Math.abs(-1) + Math.abs(1));
 //        System.out.println();
+
+
+//        String s = "../a";
+//        String[] s2 = s.split("/");
+//
+//        System.out.println(Arrays.toString(s2));
+    String s = "...";
+        System.out.println(s.equals(".."));
     }
 
 

@@ -2,7 +2,7 @@ package StackQueue.queue;
 
 import java.util.*;
 
-public class SumOfMinAndMaxSubarrayOfSizeK {
+public class SumOfMinimumAndMaximumSubarrayOfSizeK {
     public static int getSumOfMinAndMax(int[] nums, int k) {
         Deque<Integer> min = new LinkedList<>();
         Deque<Integer> max = new LinkedList<>();

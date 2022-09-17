@@ -66,30 +66,39 @@ public class CP{
 
             // code here
             int t=in.nextInt();
-            while(t-- > 0) {
 
-                // 343 B
-//                String s = in.nextLine();
-//
-//                if(s.length() == 0) out.println("NO");
-//
-//                int size = s.length();
-//                Stack<Character> stack = new Stack<>();
-//
-//                for (int i = 0; i < size; i++) {
-//                    char value = s.charAt(i);
-//
-//                    if (stack.isEmpty()) {
-//                        stack.push(value);
-//                        continue;
-//                    }
-//
-//                    if (stack.peek() == value) stack.pop();
-//                    else stack.push(value);
-//                }
-//
-//                if (stack.isEmpty()) out.println("YES");
-//                else out.println("NO");
+            List<String> list = new ArrayList<>();
+
+            while(t-- > 0) {
+                String s1 = in.nextLine();
+
+                if(s1.equals("pwd")) {
+                    // print the path
+                    out.print("/");
+                    for(int i = 0; i < list.size(); i++) out.print(list.get(i) + "/");
+                    out.println("");
+                    continue;
+                }
+
+                String s = s1.substring(3);
+
+                if(list.size() > 0 && s.charAt(0) == '/') list.removeAll(list);
+                if(s == ".." || s.equals("..")) {
+                    if(list.size() != 0) list.remove(list.size() - 1);
+                }
+                else {
+                    String[] str = s.split("/");
+                    for(int i = 0; i < str.length; i++) {
+                        if(str[i].equals("..")) {
+                            if(list.size() != 0) list.remove(list.size() - 1);
+                        }
+                        else {
+                            if(!str[i].equals("")) {
+                                list.add(str[i]);
+                            }
+                        }
+                    }
+                }
             }
 
             out.close();
