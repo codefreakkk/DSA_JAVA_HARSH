@@ -8,7 +8,7 @@ public class ProblemA {
         int month = Integer.parseInt(split[0]);
         int date = Integer.parseInt(split[1]);
 
-        // count x days
+        // count x dayss
         int cnt = 0;
         for(int i = 0; i < month; i++) {
             cnt += months[i];
