@@ -65,34 +65,41 @@ public class CP{
             FastWriter out = new FastWriter();
 
             // code here
-//            int t=in.nextInt();
-//            while(t-- > 0) {}
+            int t=in.nextInt();
 
-            String s = in.nextLine();
+            List<String> list = new ArrayList<>();
 
-            Stack<Character> stack = new Stack<>();
-            int size = s.length();
-            int cnt = 0, occur = 1, max = Integer.MIN_VALUE;
+            while(t-- > 0) {
+                String s1 = in.nextLine();
 
-            for(int i = 0; i < size; i++) {
-                char ch = s.charAt(i);
-                if(ch == '(') {
-                    stack.push(ch);
-                    cnt = 0;
+                if(s1.equals("pwd")) {
+                    // print the path
+                    out.print("/");
+                    for(int i = 0; i < list.size(); i++) out.print(list.get(i) + "/");
+                    out.println("");
+                    continue;
+                }
+
+                String s = s1.substring(3);
+
+                if(list.size() > 0 && s.charAt(0) == '/') list.removeAll(list);
+                if(s == ".." || s.equals("..")) {
+                    if(list.size() != 0) list.remove(list.size() - 1);
                 }
                 else {
-                    if(!stack.isEmpty() && ch == ')') {
-                       if(stack.peek() == '(') {
-                           stack.pop();
-                           cnt++;
-                       }
+                    String[] str = s.split("/");
+                    for(int i = 0; i < str.length; i++) {
+                        if(str[i].equals("..")) {
+                            if(list.size() != 0) list.remove(list.size() - 1);
+                        }
+                        else {
+                            if(!str[i].equals("")) {
+                                list.add(str[i]);
+                            }
+                        }
                     }
                 }
-                if(stack.isEmpty()) cnt = 0;
             }
-
-            out.print(max);
-            out.print(" " + occur);
 
             out.close();
         } catch (Exception e) {
