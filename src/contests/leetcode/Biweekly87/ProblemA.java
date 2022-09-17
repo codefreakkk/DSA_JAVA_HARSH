@@ -1,31 +1,34 @@
 package contests.leetcode.Biweekly87;
 
-import java.util.Arrays;
-
 public class ProblemA {
-    public static int matchPlayersAndTrainers(int[] players, int[] trainers) {
-        Arrays.sort(players);
-        Arrays.sort(trainers);
+    public static int convert(String time) {
+        int[] months = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
-        int i = 0, j = 0, cnt = 0;
-        int size1 = players.length, size2 = trainers.length;
+        String[] split = time.split("-");
+        int month = Integer.parseInt(split[0]);
+        int date = Integer.parseInt(split[1]);
 
-        while(i < size1 && j < size2) {
-            if(players[i] <= trainers[j]) {
-                i++;
-                j++;
-                cnt++;
-            }
-            else j++;
+        // count x days
+        int cnt = 0;
+        for(int i = 0; i < month; i++) {
+            cnt += months[i];
         }
-
+        cnt += date;
         return cnt;
     }
+    public static int countDaysTogether(String a1, String d1, String a2, String d2) {
+        int arrival1 = convert(a1);
+        int arrival2 = convert(a2);
+        int dep1 = convert(d1);
+        int dep2 = convert(d2);
 
+        int max = Math.max(arrival1, arrival2);
+        int min = Math.min(dep1, dep2);
+
+        if(max > min) return 0;
+        return min - max + 1;
+    }
     public static void main(String[] args) {
-        int[] player = {4,7,9};
-        int[] trainer = {8,2,5,8};
-
-        System.out.println(matchPlayersAndTrainers(player, trainer));
+        System.out.println(countDaysTogether("08-15", "08-18", "08-16", "08-19"));
     }
 }
