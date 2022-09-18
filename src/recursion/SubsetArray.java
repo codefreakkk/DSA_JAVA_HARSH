@@ -1,10 +1,9 @@
 package recursion;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
-public class LeetcodeSubSet78 {
+public class SubsetArray {
     private static void solve(int nums[], int index, List<Integer> output, List<List<Integer>> answer) {
         if(index >= nums.length) {
             answer.add(new ArrayList<>(output));
