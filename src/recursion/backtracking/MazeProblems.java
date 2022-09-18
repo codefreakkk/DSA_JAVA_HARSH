@@ -133,14 +133,14 @@ static void mazeWithoutObstacleAllPathAndLevel(boolean maze[][], String path, in
 }
 
     public static void main(String[] args) {
-        boolean arr[][] = new boolean[3][3];
+        boolean arr[][] = new boolean[2][2];
         for(int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[i].length; j++) {
                 arr[i][j] = true;
             }
         }
 //        arr[1][1] = false;
-        mazeWithoutObstacleAllPathAndLevel(arr, "", 0, 0, new int[arr.length][arr[0].length], 1);
-
+//        mazeWithoutObstacleAllPathAndLevel(arr, "", 0, 0, new int[arr.length][arr[0].length], 1);
+        System.out.println(mazeWithoutObstacleAllPath(arr, "", 0, 0));
     }
 }
