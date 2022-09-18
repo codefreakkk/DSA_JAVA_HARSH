@@ -34,7 +34,7 @@ public class Skip {
         }
         char ch = str.charAt(0);
         if(str.startsWith("apple")) {
-            return skipString(str.substring(3));
+            return skipString(str.substring(5));
         } else {
             return ch + skipString(str.substring(1));
         }
@@ -52,7 +52,20 @@ public class Skip {
         }
     }
 
+
+
+    // revision
+    public static String skipStringApple(String str) {
+        if(str.length() == 0) return "";
+
+        char ch = str.charAt(0);
+        if(str.startsWith("apple")) {
+            return skipStringApple(str.substring(5));
+        }
+        else return ch + skipStringApple(str.substring(1));
+    }
+
     public static void main(String[] args) {
-        System.out.println(skipAppNotApple("bcdapplefg"));
+        System.out.println(skipStringApple("bappleb"));
     }
 }

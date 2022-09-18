@@ -135,8 +135,9 @@ public class Test {
 //        String[] s2 = s.split("/");
 //
 //        System.out.println(Arrays.toString(s2));
-    String s = "...";
-        System.out.println(s.equals(".."));
+//    String s = "...";
+//        System.out.println(s.equals(".."));
+        System.out.println(Character.isLetterOrDigit('4'));
     }
 
 

@@ -63,10 +63,15 @@ public class SubSequence {
                 outerList.add(intenalList);
             }
         }
+
         return outerList;
     }
 
     public static void main(String[] args) {
-        subSeq("", "ab");
+        int[] arr = {1, 2, 3};
+        List<List<Integer>> list = subSeqIterative(arr);
+        for(List<Integer> l : list) {
+            System.out.println(l);
+        }
     }
 }

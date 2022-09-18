@@ -8,7 +8,13 @@ public class POW {
         return x * pow(x, n - 1);
     }
 
+    // revision
+    public static int powRevision(int x, int n) {
+        if(n == 1) return x;
+        return x * powRevision(x, n - 1);
+    }
+
     public static void main(String[] args) {
-        System.out.println(pow(3, 1));
+        System.out.println(powRevision(3, 3));
     }
 }
