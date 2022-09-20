@@ -2,7 +2,7 @@ package recursion;
 
 import java.util.ArrayList;
 
-public class SubsequenceWithSumK {
+public class  SubsequenceWithSumK {
     static void printSubSequenceSum(int[] nums, int index, int sum, int k, ArrayList<Integer> output) {
         if(index >= nums.length) {
             if(sum == k) {
