@@ -18,6 +18,6 @@ public class PermuteWithCaseChange {
     }
 
     public static void main(String[] args) {
-
+        permute("ab");
     }
 }

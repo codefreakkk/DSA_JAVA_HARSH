@@ -22,6 +22,6 @@ public class JosephusProblem {
     }
 
     public static void main(String[] args) {
-        System.out.println(safePosition(6, 5));
+        System.out.println(safePosition(5, 3));
     }
 }
