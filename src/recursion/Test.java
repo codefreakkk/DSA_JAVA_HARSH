@@ -136,8 +136,13 @@ public class Test {
 //
 //        System.out.println(Arrays.toString(s2));
 //    String s = "...";
-//        System.out.println(s.equals(".."));
-        System.out.println(Character.isLetterOrDigit('4'));
+////        System.out.println(s.equals(".."));
+//        System.out.println(Character.isLetterOrDigit('4'));
+
+        String a = "1221";
+        String b = "121";
+        System.out.println(a.compareTo(b));
+        // a > b returns 1 else -1
     }
 
 

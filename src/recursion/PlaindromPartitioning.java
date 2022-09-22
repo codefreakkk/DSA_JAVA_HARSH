@@ -35,7 +35,7 @@ public class PlaindromPartitioning {
     }
 
     public static void main(String[] args) {
-        List<List<String>> answer = partition("aabb");
+        List<List<String>> answer = partition("geeks");
         for(List<String> i : answer) {
             System.out.println(i);
         }
