@@ -111,6 +111,7 @@ public class SinglyLinkedListCreation {
         int value = tail.value;
         tail = temp;
         tail.next = null;
+        size--;
         return value;
     }
 
@@ -124,6 +125,7 @@ public class SinglyLinkedListCreation {
          Node node = get(index - 1);
          int value = node.value;
          node.next = node.next.next;
+         size--;
          return value;
     }
 
@@ -136,7 +138,6 @@ public class SinglyLinkedListCreation {
 
         return temp;
     }
-
     public void display() {
         Node temp = head;
 
