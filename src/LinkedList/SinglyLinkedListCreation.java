@@ -15,6 +15,8 @@ class Node {
 }
 
 public class SinglyLinkedListCreation {
+
+
     public Node head = null;
     public Node tail = null;
     public int size = 0;
