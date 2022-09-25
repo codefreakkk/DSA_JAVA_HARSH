@@ -139,10 +139,12 @@ public class Test {
 ////        System.out.println(s.equals(".."));
 //        System.out.println(Character.isLetterOrDigit('4'));
 
-        String a = "1221";
-        String b = "121";
-        System.out.println(a.compareTo(b));
+//        String a = "1221";
+//        String b = "121";
+//        System.out.println(a.compareTo(b));
         // a > b returns 1 else -1
+
+        System.out.println(3 & 3);
     }
 
 
