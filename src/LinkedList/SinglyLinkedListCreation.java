@@ -131,6 +131,20 @@ public class SinglyLinkedListCreation {
          return value;
     }
 
+    // reverse ll using recursion
+    public void reverse(Node node) {
+        if(node == tail) {
+            head = tail;
+            return;
+        }
+
+        reverse(node.next);
+        tail.next = node;
+        tail = node;
+        tail.next = null;
+    }
+
+
     // get pointer at specific index
     public Node get(int index) {
         Node temp = head;
@@ -141,6 +155,16 @@ public class SinglyLinkedListCreation {
         return temp;
     }
     public void display() {
+        Node temp = head;
+
+        while(temp != null) {
+            System.out.print(temp.value + "->");
+            temp = temp.next;
+        }
+        System.out.println("END");
+    }
+
+    public void display(Node head) {
         Node temp = head;
 
         while(temp != null) {
@@ -187,5 +211,10 @@ public class SinglyLinkedListCreation {
 
 //        ll.delete(60);
 //        ll.display();
+
+
+        ll.display();
+        ll.reverse(ll.head);
+        ll.display();
     }
 }
