@@ -12,6 +12,23 @@ package LinkedList;
  * }
  */
 
+
+// use this code will not give null pointer exception
+
+//        Node slow = head;
+//        Node fast = head;
+//
+//        while(slow != null && fast != null) {
+//        fast = fast.next;
+//        if(fast != null) fast = fast.next;
+//
+//        slow = slow.next;
+//
+//        if(slow == fast) return slow;
+//        }
+//
+//        return null;
+
 public class LinkedListCycle2 {
     public ListNode detectCycle(ListNode head) {
         ListNode slow = head;
