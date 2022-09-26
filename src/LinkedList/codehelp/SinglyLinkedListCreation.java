@@ -1,4 +1,4 @@
-package LinkedList;
+package LinkedList.codehelp;
 
 class Node {
     public int value;
@@ -141,7 +141,7 @@ public class SinglyLinkedListCreation {
         reverse(node.next);
         tail.next = node;
         tail = node;
-//        tail.next = null;
+        tail.next = null;
     }
 
 
