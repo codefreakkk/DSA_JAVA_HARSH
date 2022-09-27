@@ -4,6 +4,7 @@ package LinkedList;
 public class ReverseLinkedListInPlace {
     public static Node reverseList(Node node) {
         if(node == null || node.next == null) return node;
+
         Node previous = null;
         Node present = node;
         Node nxt = present.next;
