@@ -41,7 +41,7 @@ public class ReverseLinkedListRecursion {
         s.insertLast(30);
 
         s.display();
-        Node head = reverseList2(s.head);
+        Node head = reverseList1(s.head);
         s.display(head);
     }
 }

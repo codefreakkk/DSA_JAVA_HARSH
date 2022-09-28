@@ -18,6 +18,8 @@ public class DesignHashSetUsingLinkedList {
 
     public void add(int key) {
         int i = hash(key);
+
+        // get the linked list of corresponding index and then insert key
         LinkedList<Integer> temp = list.get(i);
         if(temp.contains(key)) return;
         temp.add(key);
