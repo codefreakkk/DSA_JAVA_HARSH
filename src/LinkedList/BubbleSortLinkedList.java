@@ -15,25 +15,25 @@ public class BubbleSortLinkedList {
         if(col < row) {
             Node first = get(head, col);
             Node second = get(head,col + 1);
-
-            if(first == head) {
-                head = second;
-                first.next = second.next;
-                second.next = first;
+            if(first.value > second.value) {
+                if (first == head) {
+                    head = second;
+                    first.next = second.next;
+                    second.next = first;
+                } else if (second == tail) {
+                    tail = first;
+                    Node prev = get(head, col - 1);
+                    prev.next = second;
+                    first.next = null;
+                    second.next = tail;
+                } else {
+                    Node prev = get(head, col - 1);
+                    prev.next = second;
+                    first.next = second.next;
+                    second.next = first;
+                }
             }
-            else if(second == tail) {
-                tail = first;
-                Node prev = get(head,col - 1);
-                prev.next = second;
-                first.next = null;
-                second.next = tail;
-            }
-            else {
-                Node prev = get(head,col - 1);
-                prev.next = second;
-                first.next = second.next;
-                second.next = first;
-            }
+            bubble(head, tail, row, col + 1);
         }
         else bubble(head, tail, row - 1, 0);
     }
@@ -43,13 +43,14 @@ public class BubbleSortLinkedList {
     }
 
     public static void main(String[] args) {
-        LL l = new LL();
+        SinglyLinkedListCreation l = new SinglyLinkedListCreation();
         l.insertLast(4);
         l.insertLast(2);
         l.insertLast(1);
         l.insertLast(3);
+        BubbleSortLinkedList b = new BubbleSortLinkedList();
+        b.bubbleSort(l.head, l.tail, l.size);
+        l.display();
 
-//        BubbleSortLinkedList bsl = new BubbleSortLinkedList();
-//        bsl.bubbleSort(l.head, l.tail, l.size);
     }
 }

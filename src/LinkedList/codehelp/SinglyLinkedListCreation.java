@@ -4,6 +4,7 @@ class Node {
     public int value;
     public Node next;
     public Node random;
+    public Node bottom;
 
     public Node(int value) {
         this.value = value;

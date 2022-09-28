@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 public class CloneALinkedListWithRandomPointer {
     // TC - o(N), SC - o(N)
-    // solution using map
+    // solution using map not much efficient as it uses map
     public static Node copyList1(Node head) {
         Node clone = new Node(-1);
         Node cloneHead = clone;
@@ -44,6 +44,7 @@ public class CloneALinkedListWithRandomPointer {
 
     //------------ Efficient solution-----------
     // TC - o(N), SC - o(1)
+    // Efficient solution
     public static Node copyList(Node head) {
         Node clone = new Node(-1), cloneHead = clone;
 
