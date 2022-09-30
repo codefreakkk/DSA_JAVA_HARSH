@@ -6,12 +6,11 @@ public class RotateList {
 
         // count the length of list
         Node tail = head;
-        int length = 0;
+        int length = 1;
         while(tail.next != null) {
             length++;
             tail = tail.next;
         }
-        length++;
 
         // number of rotations
         int rotation = k % length;
