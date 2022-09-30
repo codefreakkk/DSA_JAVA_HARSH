@@ -13,7 +13,9 @@ public class LinkedListCollections {
 //        System.out.println(list.indexOf(130)); // gives index of element if element not found gives -1
 //        System.out.println(list.size());
 
-        ListIterator l = list.listIterator(0);
+        list.add(1, 100);
+        System.out.println(list);
+//        ListIterator l = list.listIterator(0);
 //        l.next();
 //        System.out.println(l.next());
 //        list.remove(l.next());
