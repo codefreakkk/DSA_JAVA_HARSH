@@ -13,7 +13,7 @@ class LRU {
 }
 
 public class LRUCache {
-
+    
     HashMap<Integer, LRU> map = new HashMap<>();
     LRU head = new LRU(0, 0);
     LRU tail = new LRU(0, 0);
