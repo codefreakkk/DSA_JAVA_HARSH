@@ -1,7 +1,7 @@
 package LinkedList;
 
 public class DoublyLinkedListCreation {
-    private class Node {
+    class Node {
         public int value;
         public Node next;
         public Node prev;
@@ -165,6 +165,23 @@ public class DoublyLinkedListCreation {
        System.out.print("END");
        System.out.println();
    }
+
+    public void display(Node h) {
+        Node temp = h;
+
+        if(temp == null) {
+            System.out.println("List empty");
+            return;
+        }
+
+        while(temp != null) {
+            System.out.print(temp.value + "->");
+            temp = temp.next;
+        }
+
+        System.out.print("END");
+        System.out.println();
+    }
 
    // display in reverse order
    public void displayReverse() {
