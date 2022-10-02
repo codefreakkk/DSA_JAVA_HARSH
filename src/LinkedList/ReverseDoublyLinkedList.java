@@ -7,6 +7,7 @@ public class ReverseDoublyLinkedList {
         // base case
         if(current == null || current.next == null) return current;
 
+        // traverse till end of list first
         while(current.next != null) {
             current = current.next;
         }

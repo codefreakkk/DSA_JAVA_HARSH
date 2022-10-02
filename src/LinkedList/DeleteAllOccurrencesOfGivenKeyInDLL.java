@@ -20,7 +20,7 @@ public class DeleteAllOccurrencesOfGivenKeyInDLL {
         return head;
     }
 
-    public static DoublyLinkedListCreation.Node deleteAllOccurrences(DoublyLinkedListCreation.Node head, int x) 77{
+    public static DoublyLinkedListCreation.Node deleteAllOccurrences(DoublyLinkedListCreation.Node head, int x) {
         DoublyLinkedListCreation.Node current = head;
         DoublyLinkedListCreation.Node next;
         while(current != null) {

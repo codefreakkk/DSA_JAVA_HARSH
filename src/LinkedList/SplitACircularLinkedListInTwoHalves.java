@@ -16,7 +16,7 @@ public class SplitACircularLinkedListInTwoHalves {
         slow.next = head1;
 
         Node current = head2;
-        while(current.next != head) {
+        while(current.next != head2) {
             current = current.next;
         }
 
