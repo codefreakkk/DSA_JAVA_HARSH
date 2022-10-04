@@ -17,6 +17,8 @@ public class QuickSortRecursion {
 
         // place pivot at right position
         int pivotIndex = low + cnt;
+
+        // swap pivot element
         int temp = nums[pivotIndex];
         nums[pivotIndex] = nums[low];
         nums[low] = temp;
