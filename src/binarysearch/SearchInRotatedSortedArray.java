@@ -49,6 +49,27 @@ public class SearchInRotatedSortedArray {
         return -1;
     }
 
+    public static int binarySearch(int[] nums, int target, int low, int high) {
+
+        while (low <= high)
+        {
+            int mid = (low + high) / 2;
+            if (target < nums[mid])
+            {
+                high = mid - 1;
+            }
+            else if (target > nums[mid])
+            {
+                low = mid + 1;
+            }
+            else
+            {
+                return mid;
+            }
+        }
+        return -1;
+    }
+
     public static int search(int[] nums, int target) {
         int pivot = getPivot(nums);
         int left = binarySearch(nums, target, 0, pivot);

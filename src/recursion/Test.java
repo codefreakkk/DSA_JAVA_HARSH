@@ -144,8 +144,10 @@ public class Test {
 //        System.out.println(a.compareTo(b));
         // a > b returns 1 else -1
 
-        System.out.println(3 & 3);
+//        System.out.println(3 & 3);
+        System.out.println(0.04 > 0.01);
     }
+
 
 
 }
