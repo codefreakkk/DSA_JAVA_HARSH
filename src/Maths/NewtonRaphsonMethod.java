@@ -1,15 +1,18 @@
 package Maths;
 
 public class NewtonRaphsonMethod {
-    public static double sqrt(int n) {
+    public static double sqrt(int n, double prec) {
         double x = n;
-        double root = 0.0;
+        double root;
 
         while(true) {
             root = 0.5 * (x + (n / x));
 
             // if answer found
-            if(Math.abs(root - x) < 1) break;
+            // instead of prec you can also pass 1 in if condition
+            if(Math.abs(root - x) < prec) {
+                break;
+            }
 
             x = root;
         }
@@ -18,6 +21,7 @@ public class NewtonRaphsonMethod {
     }
 
     public static void main(String[] args) {
-        System.out.println(sqrt(4));
+        // converted to integer
+        System.out.println((int)sqrt(8, 1e-3));
     }
 }
