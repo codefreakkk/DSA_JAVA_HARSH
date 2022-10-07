@@ -24,6 +24,6 @@ public class GCDEuclideanAlgorithm {
     }
 
     public static void main(String[] args) {
-        System.out.println(gcdRecursion(8, 4));
+        System.out.println(gcdRecursion(2, 8));
     }
 }
