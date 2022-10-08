@@ -15,7 +15,7 @@ public class CheckRightMostSetBit {
 
 
     public static void main(String[] args) {
-        int n = 4;
+        int n = 1;
         System.out.println(rightMostSetBit(n));
     }
 }
