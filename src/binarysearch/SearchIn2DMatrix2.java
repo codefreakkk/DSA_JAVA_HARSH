@@ -1,6 +1,6 @@
 package binarysearch;
 
-public class SearchIn2DMatrix {
+public class SearchIn2DMatrix2 {
     public static boolean searchMatrix(int[][] matrix, int target) {
         // lower bound
         int start = 0;
