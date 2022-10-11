@@ -53,7 +53,7 @@ public class QuickSortRecursion {
     }
 
     public static void main(String[] args) {
-        int[] nums = {5, 4, 3, 2, 1, -1, -2, -3, -4};
+        int[] nums = {2, 3, 4, 2, 1};
         quickSort(nums);
         System.out.println(Arrays.toString(nums));
     }
