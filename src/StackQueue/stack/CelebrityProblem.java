@@ -8,6 +8,7 @@ public class CelebrityProblem {
 
         for(int i = 0; i < n; i++) stack.push(i);
 
+        // check for possible candidate
         while(stack.size() > 1) {
             int person1 = stack.pop();
             int person2 = stack.pop();

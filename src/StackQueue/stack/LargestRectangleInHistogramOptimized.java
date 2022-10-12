@@ -10,11 +10,11 @@ public class LargestRectangleInHistogramOptimized {
 
         for(int i = 0; i <= size; i++) {
 
-            while(!stack.isEmpty() &&(i == size || height[stack.peek()] >= height[i])) {
+            while(!stack.isEmpty() && (i == size || height[stack.peek()] >= height[i])) {
                 int length = height[stack.peek()];
                 stack.pop();
-                int width;
 
+                int width;
                 if(stack.isEmpty()) width = i;
                 else width = i - stack.peek() - 1;
 
