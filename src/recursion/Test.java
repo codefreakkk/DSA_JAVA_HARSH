@@ -146,9 +146,6 @@ public class Test {
 
 //        System.out.println(3 & 3);
 //        System.out.println(0.04 > 0.01);
-
-        System.out.println(2 << 4);
-
     }
 }
 
