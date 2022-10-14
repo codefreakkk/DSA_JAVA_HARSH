@@ -146,6 +146,15 @@ public class Test {
 
 //        System.out.println(3 & 3);
 //        System.out.println(0.04 > 0.01);
+        Queue<Integer> queue = new LinkedList<>();
+        queue.add(10);
+        queue.add(20);
+        queue.add(30);
+        Stack<Integer> s = new Stack<>();
+        s.push(10);
+        s.add(3);
+        int a = queue.peek();
+        System.out.println(a);
     }
 }
 
