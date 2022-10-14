@@ -3,7 +3,6 @@ package trees;
 import java.util.*;
 
 public class PostorderIterative2Stack {
-
     public List<Integer> postorderTraversal(BinaryTreeNode node) {
         List<Integer> ans = new ArrayList<>();
         Stack<BinaryTreeNode> stack1 = new Stack<>();
@@ -24,7 +23,6 @@ public class PostorderIterative2Stack {
         while(!stack2.isEmpty()) ans.add(stack2.pop().data);
         return ans;
     }
-
     public static void main(String[] args) {
 
     }
