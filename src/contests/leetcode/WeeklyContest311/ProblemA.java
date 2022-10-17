@@ -1,4 +1,4 @@
-package contests.leetcode.Contest311;
+package contests.leetcode.WeeklyContest311;
 
 public class ProblemA {
     public static int smallestEvenMultiple(int n) {

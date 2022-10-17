@@ -1,6 +1,4 @@
-package contests.leetcode.Contest311;
-
-import java.util.HashMap;
+package contests.leetcode.WeeklyContest311;
 
 public class ProblemB {
     public static int longestContinuousSubstring(String s) {

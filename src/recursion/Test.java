@@ -146,15 +146,50 @@ public class Test {
 
 //        System.out.println(3 & 3);
 //        System.out.println(0.04 > 0.01);
-        Queue<Integer> queue = new LinkedList<>();
-        queue.add(10);
-        queue.add(20);
-        queue.add(30);
-        Stack<Integer> s = new Stack<>();
-        s.push(10);
-        s.add(3);
-        int a = queue.peek();
-        System.out.println(a);
+//        Queue<Integer> queue = new LinkedList<>();
+//        queue.add(10);
+//        queue.add(20);
+//        queue.add(30);
+//        Stack<Integer> s = new Stack<>();
+//        s.push(10);
+//        s.add(3);
+//        int a = queue.peek();
+//        System.out.println(a);
+
+
+//        TreeMap<Integer, Integer> map = new TreeMap<>();
+//        map.put(4, 4);
+//        map.put(3, 3);
+//        map.put(-1, -1);
+//        map.put(0, 0);
+//        map.put(-2, -2);
+//        System.out.println(map);
+//
+//        for(Integer mp : map.values()) {
+//            System.out.println(mp);
+//        }
+
+//        TreeMap<Integer, List<Integer>> map = new TreeMap<>();
+//        List<Integer> list1 = List.of(1, 2, 3);
+//        List<Integer> list2 = List.of(4,5, 6);
+//        map.put(-2, list1);
+//        map.put(0, list2);
+//
+//        for(List<Integer> l : map.values()) {
+//            for(int i : l) {
+//                System.out.print(i + " ");
+//            }
+//        }
+
+//        PriorityQueue<Integer> pq = new PriorityQueue<>();
+//        pq.add(90);
+//        pq.add(40);
+//        pq.add(50);
+//        pq.add(80);
+//        System.out.println(pq);
+//        System.out.println(pq.poll());
+//        System.out.println(pq);
+
     }
 }
 
