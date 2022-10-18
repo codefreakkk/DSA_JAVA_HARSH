@@ -1,4 +1,4 @@
-package trees;
+package trees.BinaryTrees;
 
 public class MinimumDepthOfTreeDFS {
     public static int minDepth(BinaryTreeNode node) {

@@ -1,4 +1,4 @@
-package trees;
+package trees.BinaryTrees;
 
 public class MaximumPathSumInBinaryTree {
     public int solve(BinaryTreeNode node, int[] sum) {

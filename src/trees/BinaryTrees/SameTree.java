@@ -1,4 +1,4 @@
-package trees;
+package trees.BinaryTrees;
 
 public class SameTree {
     public boolean isSameTree(BinaryTreeNode node1, BinaryTreeNode node2) {

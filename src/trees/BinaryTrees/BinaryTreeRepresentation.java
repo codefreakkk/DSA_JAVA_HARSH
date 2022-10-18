@@ -1,4 +1,4 @@
-package trees;
+package trees.BinaryTrees;
 
 public class BinaryTreeRepresentation {
     public static void main(String[] args) {

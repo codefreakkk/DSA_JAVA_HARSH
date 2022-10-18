@@ -1,18 +1,14 @@
-package trees;
+package trees.BinaryTrees;
 
-public class PreorderRecursive {
-    public void preorder(BinaryTreeNode root) {
+public class InorderRecursive {
+    public static void inorder(BinaryTreeNode root) {
         if(root == null) return;
 
+        inorder(root.left);
         System.out.print(root.data + " ");
-
-        // recursive calls for preorder
-        preorder(root.left);
-        preorder(root.right);
+        inorder(root.right);
     }
-
     public static void main(String[] args) {
-        PreorderRecursive p = new PreorderRecursive();
         BinaryTreeNode tree = new BinaryTreeNode(1);
         tree.left = new BinaryTreeNode(2);
         tree.right = new BinaryTreeNode(3);
@@ -23,6 +19,6 @@ public class PreorderRecursive {
         tree.right.right = new BinaryTreeNode(8);
         tree.right.right.left = new BinaryTreeNode(9);
         tree.right.right.right = new BinaryTreeNode(10);
-        p.preorder(tree);
+        inorder(tree);
     }
 }

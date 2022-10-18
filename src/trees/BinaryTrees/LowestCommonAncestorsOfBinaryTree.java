@@ -1,4 +1,4 @@
-package trees;
+package trees.BinaryTrees;
 
 public class LowestCommonAncestorsOfBinaryTree {
     public BinaryTreeNode lowestCommonAncestorsOfBinaryTree(BinaryTreeNode node, BinaryTreeNode p, BinaryTreeNode q) {

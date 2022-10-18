@@ -1,4 +1,4 @@
-package trees;
+package trees.BinaryTrees;
 
 public class DiameterOfBinaryTree {
     public int solve(BinaryTreeNode node, int[] maxi) {

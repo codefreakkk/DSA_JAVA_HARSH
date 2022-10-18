@@ -1,4 +1,4 @@
-package trees;
+package trees.BinaryTrees;
 
 public class SymmetricTree {
     public boolean solve(BinaryTreeNode node1, BinaryTreeNode node2) {

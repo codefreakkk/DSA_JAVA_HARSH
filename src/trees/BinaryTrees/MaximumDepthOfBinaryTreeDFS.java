@@ -1,4 +1,4 @@
-package trees;
+package trees.BinaryTrees;
 
 public class MaximumDepthOfBinaryTreeDFS {
     public static int maxDepth(BinaryTreeNode node) {

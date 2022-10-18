@@ -1,4 +1,4 @@
-package trees;
+package trees.BinaryTrees;
 
 public class PostorderRecursive {
     public static void postorder(BinaryTreeNode root) {
