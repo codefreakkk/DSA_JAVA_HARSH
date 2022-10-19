@@ -190,6 +190,12 @@ public class Test {
 //        System.out.println(pq.poll());
 //        System.out.println(pq);
 
+
+        Queue<Integer> queue = new LinkedList<>();
+        queue.add(null);
+        System.out.println(queue.size());
+
     }
+
 }
 
