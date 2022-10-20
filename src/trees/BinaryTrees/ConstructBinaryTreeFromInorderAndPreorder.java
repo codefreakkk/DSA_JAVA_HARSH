@@ -16,7 +16,6 @@ public class ConstructBinaryTreeFromInorderAndPreorder {
 
         root.left = solve(preorder, preStart + 1, preStart + numsLeft, inorder, inStart, inRoot - 1, map);
         root.right = solve(preorder, preStart + numsLeft + 1, preEnd, inorder, inRoot + 1, inEnd, map);
-
         return root;
     }
 
