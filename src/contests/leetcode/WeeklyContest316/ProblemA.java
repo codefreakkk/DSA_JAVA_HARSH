@@ -1,30 +1,20 @@
 package contests.leetcode.WeeklyContest316;
 
-// not solved
+// solved
 public class ProblemA {
     public static boolean haveConflict(String[] event1, String[] event2) {
-        String[] end1 = event1[1].split(":");
-        String[] start2 = event2[0].split(":");
+        // convert time into integer
+        int start1 = Integer.parseInt(event1[0].substring(0, 2)) * 60 + Integer.parseInt(event1[0].substring(3));
+        int end1 = Integer.parseInt(event1[1].substring(0, 2)) * 60 + Integer.parseInt(event1[1].substring(3));
+        int start2 = Integer.parseInt(event2[0].substring(0, 2)) * 60 + Integer.parseInt(event2[0].substring(3));
+        int end2 = Integer.parseInt(event2[1].substring(0, 2)) * 60 + Integer.parseInt(event2[1].substring(3));
 
-        int endTime1 = Integer.parseInt(end1[0]);
-        int endTime2 = Integer.parseInt(start2[0]);
-
-        if(endTime1 > 12 && endTime2 <= 12) return false;
-
-        if(endTime2 <= endTime1) {
-            if(endTime2 == endTime1) {
-                if(Integer.parseInt(start2[1]) > Integer.parseInt(end1[1])) return false;
-                else return true;
-            }
-            else return true;
-        }
-
-        return false;
+        return start2 <= end1 && start1 <= end2;
     }
 
     public static void main(String[] args) {
-        String[] e1 = {"14:13","22:08"};
-        String[] e2 = {"02:40","08:08"};
+        String[] e1 = {"01:15","02:00"};
+        String[] e2 = {"02:00","03:00"};
 
         System.out.println(haveConflict(e1, e2));
     }

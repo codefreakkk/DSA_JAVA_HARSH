@@ -1,13 +1,13 @@
-package trees.BinaryTrees;
+package REVISION.trees.BinaryTrees;
 
 import java.util.*;
 
-public class PostorderIterative1Stack {
-    public List<Integer> postorderTraversal(BinaryTreeNode node) {
+public class PostorderIterativeUsing1Stack {
+    public List<Integer> postorderIterative(BinaryTreeNode node) {
         Stack<BinaryTreeNode> stack = new Stack<>();
         List<Integer> ans = new ArrayList<>();
-        if(node == null) return ans;
 
+        stack.push(node);
         BinaryTreeNode current = node;
         while(current != null || !stack.isEmpty()) {
             if(current != null) {
@@ -15,18 +15,17 @@ public class PostorderIterative1Stack {
                 current = current.left;
             }
             else {
-                BinaryTreeNode temp = stack.peek().right;
-                if(temp == null) {
-                    temp = stack.pop();
+                BinaryTreeNode element = stack.pop().right;
+                if(element == null) {
+                    BinaryTreeNode temp = stack.pop();
                     ans.add(temp.data);
 
                     // backtrack
                     while(!stack.isEmpty() && temp == stack.peek().right) {
-                        temp = stack.pop();
-                        ans.add(temp.data);
+                        ans.add(stack.pop().data);
                     }
                 }
-                else current = temp;
+                else current = element;
             }
         }
 
