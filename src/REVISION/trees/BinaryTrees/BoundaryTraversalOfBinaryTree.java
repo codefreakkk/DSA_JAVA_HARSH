@@ -1,4 +1,4 @@
-package trees.BinaryTrees;
+package REVISION.trees.BinaryTrees;
 
 import java.util.*;
 
@@ -20,23 +20,24 @@ public class BoundaryTraversalOfBinaryTree {
             ans.add(node.data);
             return;
         }
+
         if(node.left != null) leafNodes(node.left, ans);
         if(node.right != null) leafNodes(node.right, ans);
     }
 
     public void rightNodes(BinaryTreeNode node, ArrayList<Integer> ans) {
         BinaryTreeNode current = node.right;
-        ArrayList<Integer> temp = new ArrayList<>();
+        ArrayList<Integer> output = new ArrayList<>();
 
         while(current != null) {
-            if(!isLeaf(current)) temp.add(current.data);
+            if(!isLeaf(current)) output.add(current.data);
             if(current.right != null) current = current.right;
             else current = current.left;
         }
 
-        // store final answer
-        Collections.reverse(temp);
-        for(int i = 0; i < temp.size(); i++) ans.add(temp.get(i));
+        // reverse output
+        Collections.reverse(output);
+        for(int i = 0; i < output.size(); i++) ans.add(output.get(i));
     }
 
     public ArrayList<Integer> boundaryTraversal(BinaryTreeNode node) {
