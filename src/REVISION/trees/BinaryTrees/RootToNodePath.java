@@ -1,23 +1,25 @@
-package trees.BinaryTrees;
+package REVISION.trees.BinaryTrees;
 
 import java.util.*;
 
-public class RootToLeafPaths {
+public class RootToNodePath {
     public boolean solve(BinaryTreeNode node, int val, ArrayList<Integer> ans) {
         if(node == null) return false;
 
-        ans.add(node.data);
         if(node.data == val) return true;
-
-        if(solve(node.left, val, ans) || solve(node.right, val, ans)) return true;
+        ans.add(node.data);
+        boolean left = solve(node.left, val, ans);
+        boolean right = solve(node.right, val, ans);
 
         // backtrack
+        if(left || right) return true;
         ans.remove(ans.size() - 1);
         return false;
     }
 
-    public ArrayList<Integer> rootToLeafPath(BinaryTreeNode node, int val) {
+    public ArrayList<Integer> rootToNodePath(BinaryTreeNode node, int val) {
         ArrayList<Integer> ans = new ArrayList<>();
+        if(node == null) return ans;
         solve(node, val, ans);
         return ans;
     }
