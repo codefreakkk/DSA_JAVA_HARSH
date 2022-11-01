@@ -34,9 +34,6 @@ public class CountCompleteTreeNodes {
         return 1 + countNodes(node.left) + countNodes(node.right);
     }
 
-
-
-
     public static void main(String[] args) {
 
     }
