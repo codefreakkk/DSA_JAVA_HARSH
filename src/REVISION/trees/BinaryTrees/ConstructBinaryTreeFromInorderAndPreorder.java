@@ -1,14 +1,13 @@
-package trees.BinaryTrees;
+package REVISION.trees.BinaryTrees;
 
 import java.util.*;
 
 public class ConstructBinaryTreeFromInorderAndPreorder {
-    public BinaryTreeNode solve(int[] preorder, int preStart, int preEnd, int[] inorder, int inStart, int inEnd,
-                                HashMap<Integer, Integer> map) {
-        // base case
+    public BinaryTreeNode solve(int[] preorder, int preStart, int preEnd, int[] inorder, int inStart, int inEnd, HashMap<Integer, Integer> map)
+    {
         if(preStart > preEnd || inStart > inEnd) return null;
 
-        // create new node
+        // create a new root node
         BinaryTreeNode root = new BinaryTreeNode(preorder[preStart]);
 
         int inRoot = map.get(root.data);
@@ -19,10 +18,9 @@ public class ConstructBinaryTreeFromInorderAndPreorder {
         return root;
     }
 
-    public BinaryTreeNode buildTree(int[] preorder, int[] inorder) {
+    public BinaryTreeNode buildTree(int[] inorder, int[] preorder) {
         HashMap<Integer, Integer> map = new HashMap<>();
         for(int i = 0; i < inorder.length; i++) map.put(inorder[i], i);
-
         return solve(preorder, 0, preorder.length - 1, inorder, 0, inorder.length - 1, map);
     }
 
