@@ -20,7 +20,6 @@ public class RecoverBST {
         prev = node;
         solve(node.right);
     }
-
     public void recoverTree(TreeNode node) {
         first = middle = last = null;
         prev = new TreeNode(Integer.MIN_VALUE);
@@ -38,7 +37,6 @@ public class RecoverBST {
             middle.data = temp;
         }
     }
-
     public static void main(String[] args) {
 
     }
