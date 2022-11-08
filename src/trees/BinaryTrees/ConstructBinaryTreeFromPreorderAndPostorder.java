@@ -18,14 +18,14 @@ public class ConstructBinaryTreeFromPreorderAndPostorder {
         root.right = solve(preorder, postorder, postIndex + 1, postEnd - 1, map);
         return root;
     }
-
     public BinaryTreeNode constructFromPrePost(int[] preorder, int[] postorder) {
         HashMap<Integer, Integer> map = new HashMap<>();
         for(int i = 0; i < preorder.length; i++) map.put(postorder[i], i);
         return solve(preorder, postorder, 0, postorder.length - 1, map);
     }
-
     public static void main(String[] args) {
 
     }
 }
+
+
