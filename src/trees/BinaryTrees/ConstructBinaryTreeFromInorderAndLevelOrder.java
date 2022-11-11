@@ -6,10 +6,6 @@ import java.util.stream.*;
 
 // not solved
 
-
-
-
-
 public class ConstructBinaryTreeFromInorderAndLevelOrder {
     public int[] find(int[] nums, int[] level) {
         Set<Integer> set = new HashSet<>();

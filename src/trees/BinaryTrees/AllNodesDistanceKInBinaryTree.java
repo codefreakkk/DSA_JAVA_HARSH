@@ -20,7 +20,6 @@ public class AllNodesDistanceKInBinaryTree {
         }
     }
 
-
     public List<Integer> distanceK(BinaryTreeNode node, BinaryTreeNode target, int k) {
         HashMap<BinaryTreeNode, BinaryTreeNode> parent = new HashMap<>();
         markParent(node, parent);

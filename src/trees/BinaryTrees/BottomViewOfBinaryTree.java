@@ -12,7 +12,7 @@ class Tupples {
     }
 }
 
-public class BottomViewBinaryTree {
+ class BottomViewBinaryTree {
     public ArrayList<Integer> bottomView(BinaryTreeNode node) {
         TreeMap<Integer, Integer> map = new TreeMap<>();
         Queue<Tupples> queue = new LinkedList<>();
