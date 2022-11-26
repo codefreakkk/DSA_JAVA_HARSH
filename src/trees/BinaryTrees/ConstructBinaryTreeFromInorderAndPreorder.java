@@ -6,7 +6,7 @@ public class ConstructBinaryTreeFromInorderAndPreorder {
     public BinaryTreeNode solve(int[] preorder, int preStart, int preEnd, int[] inorder, int inStart, int inEnd,
                                 HashMap<Integer, Integer> map) {
         // base case
-        if(preStart > preEnd || inStart > inEnd) return null;
+        if(preStart > preEnd || inStart > inEnd ) return null;
 
         // create new node
         BinaryTreeNode root = new BinaryTreeNode(preorder[preStart]);
