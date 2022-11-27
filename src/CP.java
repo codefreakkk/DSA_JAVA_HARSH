@@ -2,7 +2,7 @@
 import java.util.*;
 import java.io.*;
 
-public class CP{
+public class CP {
     static class FastReader{
         BufferedReader br;
         StringTokenizer st;
