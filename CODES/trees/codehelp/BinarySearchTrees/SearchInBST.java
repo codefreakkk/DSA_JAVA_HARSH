@@ -26,11 +26,11 @@ public class SearchInBST {
     public TreeNode searchInBST(TreeNode node, int val) {
         TreeNode current = node;
         while (current != null) {
-            if (current.data == val) 
+            if (current.data == val)
                 return current;
             if (val < current.data)
                 current = current.left;
-            else 
+            else
                 current = current.right;
         }
         return null;
