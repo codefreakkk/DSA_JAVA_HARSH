@@ -3,7 +3,7 @@ package trees.BinarySearchTrees;
 public class KthSmallestElementInBinarySearchTree {
     public int kthSmallestElement(TreeNode node, int k) {
         TreeNode root = node;
-        int count = 0, answer = 0;;
+        int count = 0, answer = 0;
 
         while(node != null) {
             if(node.left == null) {
