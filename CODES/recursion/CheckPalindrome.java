@@ -23,3 +23,4 @@ public class CheckPalindrome {
         System.out.println(checkPalindrome("aba"));
     }
 }
+
