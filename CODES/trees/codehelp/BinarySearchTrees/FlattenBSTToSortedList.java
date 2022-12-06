@@ -26,7 +26,6 @@ public class FlattenBSTToSortedList {
         }
         current.left = null;
         current.right = null;
-
         return newRoot;
     }
 
