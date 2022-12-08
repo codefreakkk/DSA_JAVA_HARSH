@@ -15,7 +15,7 @@ public class ConvertSortedListToBST {
         ListNode slow = head;
         ListNode fast = head;
 
-        while(fast != tail && fast.next != tail) {
+        while (fast != tail && fast.next != tail) {
             slow = slow.next;
             fast = fast.next.next;
         }
