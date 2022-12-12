@@ -93,7 +93,6 @@ public class CP {
 
             out.print(max);
             out.print(" " + occur);
-
             out.close();
         } catch (Exception e) {
             e.printStackTrace();
