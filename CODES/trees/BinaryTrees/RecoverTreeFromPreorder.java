@@ -1,9 +1,10 @@
 package trees.BinaryTrees;
 
 public class RecoverTreeFromPreorder {
-    public BinaryTreeNode solve(String str, int level, int[] index) {
-        if (index[0] == str.length())
+    public static BinaryTreeNode solve(String str, int level, int[] index) {
+        if (index[0] == str.length()) {
             return null;
+        }
 
         int currentLevel = 0;
         while (str.charAt(index[0] + currentLevel) == '-')
@@ -11,9 +12,8 @@ public class RecoverTreeFromPreorder {
 
         if (currentLevel == level) {
             index[0] += currentLevel;
-
             int currentValue = 0;
-            while (str.charAt(index[0]) >= '0' && str.charAt(index[0]) <= 9) {
+            while (index[0] < str.length() && str.charAt(index[0]) >= '0' && str.charAt(index[0]) <= '9') {
                 currentValue = (10 * currentValue) + str.charAt(index[0]) - '0';
                 index[0]++;
             }
@@ -31,6 +31,7 @@ public class RecoverTreeFromPreorder {
     }
 
     public static void main(String[] args) {
-        
+        String str = "1-2--3--4-5--6--7";
+        BinaryTreeNode node = solve(str, 0, new int[] {0});
     }
 }
