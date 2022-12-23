@@ -66,7 +66,8 @@ public class CP {
             FastWriter out = new FastWriter();
 
             // code here
-//            int t=in.nextInt();
+
+            //            int t=in.nextInt();
 //            while(t-- > 0) {}
 
             String s = in.nextLine();
