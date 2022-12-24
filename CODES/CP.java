@@ -17,7 +17,6 @@ public class CP {
                     e.printStackTrace();
                 }
             }
-            
             return st.nextToken();
         }
         int nextInt(){

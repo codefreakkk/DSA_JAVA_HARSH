@@ -8,19 +8,22 @@ public class ConstructBinarySearchTree {
         Queue<TreeNode> queue = new LinkedList<>();
         queue.offer(node);
 
-        while(!queue.isEmpty()) {
+        while (!queue.isEmpty()) {
             int size = queue.size();
-            for(int i = 0; i < size; i++) {
+            for (int i = 0; i < size; i++) {
                 TreeNode element = queue.poll();
                 System.out.print(element.data + " ");
-                if(element.left != null) queue.offer(element.left);
-                if(element.right != null) queue.offer(element.right);
+                if (element.left != null)
+                    queue.offer(element.left);
+                if (element.right != null)
+                    queue.offer(element.right);
             }
         }
     }
 
     public static void inorder(TreeNode node) {
-        if(node == null) return;
+        if (node == null)
+            return;
 
         inorder(node.left);
         System.out.println(node.data);
