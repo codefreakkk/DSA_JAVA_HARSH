@@ -1,3 +1,4 @@
+package contest.leetcode.WeeklyContet323;
 import java.util.*;
 public class ProblemA {
     public static int deleteGreatestValues(int[][] grid) {
