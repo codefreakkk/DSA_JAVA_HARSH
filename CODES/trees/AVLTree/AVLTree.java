@@ -29,10 +29,10 @@ public class AVLTree {
 
     public Node getMinimumNode(Node node) {
         Node current = node;
-        
-        while (current.left != null) 
+
+        while (current.left != null)
             current = current.left;
-        
+
         return current;
     }
 
@@ -171,7 +171,7 @@ public class AVLTree {
         tree.root = tree.insert(tree.root, 40);
         tree.root = tree.insert(tree.root, 50);
         tree.root = tree.insert(tree.root, 25);
-        
+
         tree.preOrder(tree.root);
         System.out.println();
         tree.delete(tree.root, 10);
