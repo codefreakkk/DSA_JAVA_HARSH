@@ -22,7 +22,7 @@ class RedBlackTree {
     }
 
     public Node rotateLeft(Node node) {
-        Node x = root.right;
+        Node x = node.right;
         Node y = x.left;
         x.left = node;
         node.right = y;
@@ -34,7 +34,7 @@ class RedBlackTree {
     }
 
     public Node rotateRight(Node node) {
-        Node x = root.left;
+        Node x = node.left;
         Node y = x.right;
         x.right = node;
         node.left = y;
@@ -52,22 +52,21 @@ class RedBlackTree {
     boolean rl = false;
 
     public Node insertHelper(Node root, int data) {
-        System.out.println("in");
         boolean f = false;
 
         if (root == null)
-            return new Node(data);
+            return (new Node(data));
         else if (data < root.data) {
             root.left = insertHelper(root.left, data);
             root.left.parent = root;
-            if (this.root != root) {
+            if (root != this.root) {
                 if (root.color == 'R' && root.left.color == 'R')
                     f = true;
             }
         } else {
             root.right = insertHelper(root.right, data);
             root.right.parent = root;
-            if (this.root != root) {
+            if (root != this.root) {
                 if (root.color == 'R' && root.right.color == 'R')
                     f = true;
             }
@@ -138,7 +137,7 @@ class RedBlackTree {
     }
 
     public void insert(int data) {
-        if (this.root != null) {
+        if (this.root == null) {
             this.root = new Node(data);
             this.root.color = 'B';
         } else
@@ -156,9 +155,11 @@ class RedBlackTree {
 
     public static void main(String[] args) {
         RedBlackTree t = new RedBlackTree();
-        t.insert(10);
-        t.insert(12);
-        t.insert(9);
+        int[] arr = {1,4,6,3,5,7,8,2,9};
+        for(int i=0;i<9;i++)
+        {
+            t.insert(arr[i]);
+        };
         t.inorder(t.root);
     }
 }
